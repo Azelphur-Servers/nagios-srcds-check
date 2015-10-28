@@ -15,6 +15,8 @@ This is a simple python script which we will use to let nagios know about the st
 
 # Installing
 You'll need python-valve, which you can get by running
+```
 git clone https://github.com/Holiverh/python-valve.git
 cd python-valve
 sudo python setup.py install
+```
