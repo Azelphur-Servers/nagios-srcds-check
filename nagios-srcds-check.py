@@ -44,8 +44,10 @@ if args.rcon_password:
             if match:
                 pings.append(int(match.group('ping')))
                 losses.append(int(match.group('loss')))
-        print('AvgLoss: %d' % (sum(losses)/len(losses),))
-        print('AvgPing: %d' % (sum(pings)/len(pings),))
+        if len(losses) > 0:
+            print('AvgLoss: %d' % (sum(losses)/len(losses),))
+        if len(pings) > 0:
+            print('AvgPing: %d' % (sum(pings)/len(pings),))
         if 'SourceMod Version Information' in rcon('sm version'):
             print('SourceMod: true')
         else:
